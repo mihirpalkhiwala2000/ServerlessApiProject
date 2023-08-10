@@ -1,0 +1,21 @@
+service: sampleApi
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+
+functions:
+  helloFn:
+    handler: handler.hello
+    events:
+      - httpApi:
+      - schedule:
+          rate(1 minute)
+
+          # path: /hello
+          # method: post

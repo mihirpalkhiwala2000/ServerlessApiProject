@@ -1,0 +1,23 @@
+{
+  "name": "sls",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc -b",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -b && nodemon dist/index.js",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "invoke": "^0.1.2",
+    "mongodb": "^5.7.0",
+    "serverless": "^3.34.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-typescript": "^2.1.5",
+    "tsc": "^2.0.4",
+    "typescript": "^5.1.6"
+  }
+}
